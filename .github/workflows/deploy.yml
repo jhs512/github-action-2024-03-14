@@ -10,7 +10,7 @@ on:
       - main
 jobs:
   makeTagAndRelease:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     outputs:
       tag_name: ${{ steps.create_tag.outputs.new_tag }}
     steps:
