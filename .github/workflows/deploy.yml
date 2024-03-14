@@ -47,7 +47,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 소문자 소유자 이름 설정
         run: |
-          owner_lc="${{ github.repository_owner }}".lowercase()
+          owner_lc="${{ github.repository_owner }}"
           echo "OWNER_LC=$owner_lc" >> $GITHUB_ENV
       - name: no.html 생성
         run: echo "$NO_HTML" > src/no.html
